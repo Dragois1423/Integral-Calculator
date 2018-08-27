@@ -1,0 +1,224 @@
+Option Explicit
+
+
+Private Sub CalcButton_Click()
+
+Dim result As Double, LowerB As Double, UpperB As Double
+UpperB = 0
+LowerB = 0
+result = 0
+
+
+If UserForm2.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm2.exponent = UserForm2.exponent + 1
+    UserForm2.coefficient = UserForm2.coefficient / UserForm2.exponent
+    UpperB = UpperB + UserForm2.coefficient * UserForm12.UpperB ^ UserForm2.exponent
+    LowerB = LowerB + UserForm2.coefficient * UserForm12.LowerB ^ UserForm2.exponent
+
+End If
+
+If UserForm3.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm3.exponent = UserForm3.exponent + 1
+    UserForm3.coefficient = UserForm3.coefficient / UserForm3.exponent
+    UpperB = UpperB + UserForm3.coefficient * UserForm12.UpperB ^ UserForm3.exponent
+    LowerB = LowerB + UserForm3.coefficient * UserForm12.LowerB ^ UserForm3.exponent
+
+End If
+
+
+If UserForm4.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm4.exponent = UserForm4.exponent + 1
+    UserForm4.coefficient = UserForm4.coefficient / UserForm4.exponent
+    UpperB = UpperB + UserForm4.coefficient * UserForm12.UpperB ^ UserForm4.exponent
+    LowerB = LowerB + UserForm4.coefficient * UserForm12.LowerB ^ UserForm4.exponent
+
+End If
+
+
+If UserForm5.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm5.exponent = UserForm5.exponent + 1
+    UserForm5.coefficient = UserForm5.coefficient / UserForm5.exponent
+    UpperB = UpperB + UserForm5.coefficient * UserForm12.UpperB ^ UserForm5.exponent
+    LowerB = LowerB + UserForm5.coefficient * UserForm12.LowerB ^ UserForm5.exponent
+
+End If
+
+If UserForm6.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm6.exponent = UserForm6.exponent + 1
+    UserForm6.coefficient = UserForm6.coefficient / UserForm6.exponent
+    UpperB = UpperB + UserForm6.coefficient * UserForm12.UpperB ^ UserForm6.exponent
+    LowerB = LowerB + UserForm6.coefficient * UserForm12.LowerB ^ UserForm6.exponent
+
+End If
+If UserForm7.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm7.exponent = UserForm7.exponent + 1
+    UserForm7.coefficient = UserForm7.coefficient / UserForm7.exponent
+    UpperB = UpperB + UserForm7.coefficient * UserForm12.UpperB ^ UserForm7.exponent
+    LowerB = LowerB + UserForm7.coefficient * UserForm12.LowerB ^ UserForm7.exponent
+
+    
+End If
+
+If UserForm8.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm8.exponent = UserForm8.exponent + 1
+    UserForm8.coefficient = UserForm8.coefficient / UserForm8.exponent
+    UpperB = UpperB + UserForm8.coefficient * UserForm12.UpperB ^ UserForm8.exponent
+    LowerB = LowerB + UserForm8.coefficient * UserForm12.LowerB ^ UserForm8.exponent
+
+    
+End If
+
+If UserForm9.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm9.exponent = UserForm9.exponent + 1
+    UserForm9.coefficient = UserForm9.coefficient / UserForm9.exponent
+    UpperB = UpperB + UserForm9.coefficient * UserForm12.UpperB ^ UserForm9.exponent
+    LowerB = LowerB + UserForm9.coefficient * UserForm12.LowerB ^ UserForm9.exponent
+
+    
+End If
+
+If UserForm10.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm10.exponent = UserForm10.exponent + 1
+    UserForm10.coefficient = UserForm10.coefficient / UserForm10.exponent
+    UpperB = UpperB + UserForm10.coefficient * UserForm12.UpperB ^ UserForm10.exponent
+    LowerB = LowerB + UserForm10.coefficient * UserForm12.LowerB ^ UserForm10.exponent
+
+
+End If
+If UserForm11.coefficient = 0 Then
+    result = result + 0
+
+Else
+    UserForm11.exponent = UserForm11.exponent + 1
+    UserForm11.coefficient = UserForm11.coefficient / UserForm11.exponent
+    UpperB = UpperB + UserForm11.coefficient * UserForm12.UpperB ^ UserForm11.exponent
+    LowerB = LowerB + UserForm11.coefficient * UserForm12.LowerB ^ UserForm11.exponent
+
+
+End If
+
+result = UpperB - LowerB
+MsgBox ("The area between the lower and upper bounds underneath this function is: " & result)
+
+Unload UserForm2
+Unload UserForm3
+Unload UserForm4
+Unload UserForm5
+Unload UserForm6
+Unload UserForm7
+Unload UserForm8
+Unload UserForm9
+Unload UserForm10
+Unload UserForm11
+End Sub
+
+Private Sub ExitButton_Click()
+Unload UserForm1
+Unload UserForm2
+Unload UserForm3
+Unload UserForm4
+Unload UserForm5
+Unload UserForm6
+Unload UserForm7
+Unload UserForm8
+Unload UserForm9
+Unload UserForm10
+Unload UserForm11
+
+End Sub
+
+Private Sub InsValueXButton_Click()
+UserForm12.Show
+
+End Sub
+
+Private Sub ResetAllButton_Click()
+Unload UserForm2
+Unload UserForm3
+Unload UserForm4
+Unload UserForm5
+Unload UserForm6
+Unload UserForm7
+Unload UserForm8
+Unload UserForm9
+Unload UserForm10
+Unload UserForm11
+
+End Sub
+
+Private Sub Term10Button_Click()
+UserForm11.Show
+
+End Sub
+
+Private Sub Term1Button_Click()
+UserForm2.Show
+
+End Sub
+
+Private Sub Term2Button_Click()
+UserForm3.Show
+
+End Sub
+
+Private Sub Term3Button_Click()
+UserForm4.Show
+
+End Sub
+
+Private Sub Term4Button_Click()
+UserForm5.Show
+
+End Sub
+
+Private Sub Term5Button_Click()
+UserForm6.Show
+
+End Sub
+
+Private Sub Term6Button_Click()
+UserForm7.Show
+
+End Sub
+
+Private Sub Term7Button_Click()
+UserForm8.Show
+
+End Sub
+
+Private Sub Term8Button_Click()
+UserForm9.Show
+
+End Sub
+
+Private Sub Term9Button_Click()
+UserForm10.Show
+
+End Sub
